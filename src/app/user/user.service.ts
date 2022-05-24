@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,5 +23,15 @@ export class UserService {
      });
    });
  }
-}
+getData(){
+  return new Promise ((resolve,reject)=>{
+    this.http
+    .get('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=e0CO6FMMk2WpFQxZmqT0iCVuNyBZ0sPu')
+    .subscribe((res)=>{
+      if (res){
+        resolve(res);
+      }
+    })
+  })
+}}
 
