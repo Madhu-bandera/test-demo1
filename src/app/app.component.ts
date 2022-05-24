@@ -9,18 +9,19 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent implements OnInit{
   list:any=[];
-
+  
   constructor(private service:UserService){}
   ngOnInit(): void {
     this.userInformation();
+  
 
   }
   userInformation(){
     this.service
     .userInfo()
-    .then((res)=>{
-     console.log('data',res)
-      this.list=res;
+    .then((res:any)=>{
+     console.log('data',res.results)
+      this.list=res.results;
     })
     .catch((err)=>{
       console.log('err',err);
