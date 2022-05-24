@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row my-4">
+        <div class="col-sm-4 my-3" *ngFor="let user of list">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{user.title}}</h4>
+                    <h5>{{user.author}}</h5>
+                    <h5>{{user.publisher}}</h5>
+                    <h5>{{user.rank}}</h5>
+                    <h5>{{user.rank_last_week}}</h5>
+                    <h5>{{user.weeks_on_list}}</h5>
+                    <img class="img-fluid" src="{{user.book_image}}" alt="responsive image">
+                    <h5>{{user.amazon_product_url}}</h5>
+                    <h5>{{user.book_uri}}</h5>
+                    <h5>{{user.contributor}}</h5>
+                    <h5>{{user.description}}</h5>
+                    <h5>{{user.price}}</h5>
+                    <h5>{{user.primary_isbn10}}</h5>
+                    <h5>{{user.primary_isbn13}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
