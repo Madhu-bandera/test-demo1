@@ -1,10 +1,31 @@
 <div class="container">
   <div class="row my-4">
-    <li *ngFor="let user of list">
-      <ul>
-        <h1>{{ user.results }}</h1>
-      </ul>
+    <div class="col-sm-4 my-3" *ngFor="let user of list">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">{{user.slug_name}}</h4>
+          <h5>{{user.section}}</h5>
+          <h5>{{user.subsection}}</h5>
+          <h5>{{user.title}}</h5>
+          <h5>{{user.abstract}}</h5>
+          <h5>{{user.byline}}</h5>
+          <h5>{{user.created_date}}</h5>
+          <h5>{{user.des_facet}}</h5>
+          <h5>{{user.first_published_date}}</h5>
+          <h5>{{user.item_type}}</h5>
+          <h5>{{user.material_type_facet}}</h5>
+          <h5>{{user.org_facet}}</h5>
+          <h5>{{user.per_facet}}</h5>
+          <h5>{{user.published_date}}</h5>
+          <h5>{{user.source}}</h5>
+          <img class="img-fluid" src="{{user.thumbnail_standard}}" alt="responsive image">
+          <h5>{{user.updated_date}}</h5>
+          <h5>{{user.uri}}</h5>
+          <h5>{{user.url}}</h5>
 
-    </li>
+
+        </div>
+      </div>
+    </div>
   </div>
 </div>
